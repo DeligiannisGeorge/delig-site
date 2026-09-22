@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: CeraProBold;
+      src: url(./CeraProLight.otf);
+    }
+
+    body {
+      background-color: #282a36;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      user-select: none;
+      transition: background-color 0.5s;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .info-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 24px;
+      color: #5a72a4;
+    }
+
+    .info-wrapper a {
+      color: #5a72a4;
+      transition: color 0.4s;
+      text-decoration: none;
+    }
+
+    .info-wrapper a:hover {
+      color: #ff79c6;
+    }
+
+    .info-wrapper a.bs:hover {
+      color: #8be9fd;
+    }
+
+    h1 {
+      height: 100%;
+      color: #ff79c6;
+      font-size: 25vw;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: CeraProBold;
+      animation: op 2s ease-in-out, letSp 3s ease-in-out forwards, infinite alternate-reverse;
+      opacity: 1;
+      letter-spacing: -100px;
+      transition: color 0.5s;
+      will-change: contents;
+    }
+
+    .rotate {
+      display: inline-block;
+      transform: rotate(0);
+      position: relative;
+      animation: op 2s ease-in-out, rot 3s ease-in-out forwards;
+      transform-origin: center;
+    }
+
+    @keyframes letSp {
+      from {
+        letter-spacing: -100px;
+      }
+
+      to {
+        letter-spacing: 0px;
+      }
+    }
+
+    @keyframes op {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes rot {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(180deg);
+      }
+    }
+
+    body.day {
+      background-color: #ffffff;
+    }
+
+    .day h1 {
+      color: #000000;
+      animation: op 2s ease-in-out, letSp 3s ease-in-out forwards;
+    }
+
+    .day .info-wrapper {
+      color: #000000;
+    }
+
+    .day .info-wrapper a {
+      color: #414141;
+    }
+
+    .day .info-wrapper a:hover {
+      color: #414141;
+    }
+
+    .day .info-wrapper a.bs:hover {
+      color: #282828;
+    }
+
+    .wrapper2 {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .line {
+      width: 20%;
+      min-width: 140px;
+      border-top: 8px solid #f1fa8c;
+      position: absolute;
+      transition: border-color 0.4s;
+    }
+
+    .line-r {
+      align-self: flex-end;
+      right: -50%;
+      top: 10%;
+      animation: l-r 3s ease-in-out forwards;
+    }
+
+    .line-l {
+      align-self: flex-start;
+      left: -50%;
+      bottom: 10%;
+      animation: l-l 3s ease-in-out forwards;
+    }
+
+    .day .line {
+      border-color: #000000;
+    }
+
+    @keyframes l-r {
+      from {
+        right: -50%;
+      }
+
+      to {
+        right: 0;
+      }
+    }
+
+    @keyframes l-l {
+      from {
+        left: -50%;
+      }
+
+      to {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper2">
+    <div class="line line-r"></div>
+    <h1> <span>del<span class="rotate">!</span>g</span> </h1>
+    <div class="line line-l"></div>
+  </div>
+
+</body>
+
+</html>
